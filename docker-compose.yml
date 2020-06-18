@@ -3,10 +3,12 @@ version: '3'
 services:
   highlight:
     image: inkohx/highlight-discordbot:latest
+    restart: always
     environment:
       - DISCORD_TOKEN=${HIGHLIGHT_DISCORD_TOKEN}
 
   vm2:
     image: inkohx/vm2-discordbot:latest
+    restart: always
     environment:
       - DISCORD_TOKEN=${VM2_DISCORD_TOKEN}
